@@ -79,7 +79,7 @@ const Loginn = () => {
         item
         xs={12}
         sx={{
-          background: 'url(/public/images/ballots.png) no-repeat center center',
+          background: 'url(/images/ballots.png) no-repeat center center',
           backgroundSize: 'cover',
           height: '100vh',
           position: 'absolute',

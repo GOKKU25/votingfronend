@@ -53,7 +53,7 @@ const ForgotPassword = () => {
       alignItems="center"
       justifyContent="flex-start"
       sx={{
-        backgroundImage: "url('/public/images/ballots.png')",
+        backgroundImage: "url('/images/ballots.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         paddingLeft: "10%",
