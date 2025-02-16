@@ -17,6 +17,7 @@ import Open from './components/Admin/Open';
 import QRCodePage from './components/Admin/QRCodePage';
 import Openvote from './components/Admin/Openvote';
 import AdminVotings from './components/Admin/AdminVotings';
+import PrivateRoutes from './components/PrivateRoutes';
 
 
 
@@ -31,6 +32,7 @@ function App() {
         <Route path="/forgot-password"              element={<Main   child={<ForgotPassword      />} />}>       </Route>
         <Route path="/create-new-password/:token"   element={<Main   child={<CreateNewPassword   />} />}>       </Route>
         <Route path="/signup"                       element={<Main   child={<Signup              />} />}>       </Route> 
+        <Route element={<PrivateRoutes/>}>
         <Route path="/dashboard"                    element={<Main1 child1={<Dashboard           />} />}>       </Route> 
         <Route path="/voter-profile"                element={<Main1 child1={<Profile             />} />}>       </Route>
         <Route path="/vote-result"                  element={<Main1 child1={<VoteResult          />} />}>       </Route>
@@ -42,7 +44,9 @@ function App() {
         <Route path="/qr-code"                      element={<Main2 child2={<QRCodePage          />} />}>       </Route>
         <Route path="/Open"                         element={<Main2 child2={<Openvote            />} />}>       </Route>
         <Route path="/adminvoting"                  element={<Main2 child2={<AdminVotings        />} />}>       </Route>
+        </Route>
       </Routes>
+
     </div>
   );
 }

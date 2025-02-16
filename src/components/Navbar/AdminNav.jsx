@@ -9,17 +9,26 @@ const AdminNav = () => {
   const [hovered, setHovered] = useState(null);
   const navigate = useNavigate();
 
+ 
+
+
   const settings = [
     { label: 'ADD-VOTING', path: '/addvoting' },
     { label: 'OPEN-VOTING', path: '/Create_openvoting' },
     { label: 'VOTINGS', path: '/adminvoting' },
     { label: 'ABOUT', tooltip: 'The Online Voting System is a secure and efficient full-stack web application designed to simplify and modernize election processes.' },
     { label: 'CONTACT', tooltip: 'Contact no: 7025224881, Email: OVC@gmail.com' },
-    { label: 'LOGOUT', action: () => { alert('Logged out'); navigate('/'); } }
+    { label: 'LOGOUT', action: () => { handleLogout(); } }
   ];
 
   const handleOpenNavMenu = (event) => setAnchorElNav(event.currentTarget);
   const handleCloseNavMenu = () => setAnchorElNav(null);
+  
+  const handleLogout = () => {
+    sessionStorage.clear();
+    navigate('/');  // Assuming navigate is defined somewhere else, like useNavigate from react-router
+    window.location.replace('/'); // This will reload the page and redirect to the homepage
+  };
   
   return (
     <>

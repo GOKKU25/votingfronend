@@ -27,11 +27,15 @@ const Navvbar = () => {
   const handleOpenNavMenu = (event) => setAnchorElNav(event.currentTarget);
   const handleCloseNavMenu = () => setAnchorElNav(null);
 
+
+  
+
+
   const handleNavClick = (setting) => {
     setAnchorElNav(null); // Close menu on click
+  
     if (setting === 'LOGOUT') {
-      alert('Logged out');
-      navigate('/');
+      handleLogout(); // Directly call handleLogout
     } else if (setting === 'PROFILE') {
       navigate('/voter-profile');
     } else if (setting === 'VOTE-RESULT') {
@@ -40,6 +44,14 @@ const Navvbar = () => {
       navigate('/dashboard');
     }
   };
+  
+  const handleLogout = () => {
+    sessionStorage.clear();
+    navigate('/');
+    window.location.replace('/'); // This will reload the page after logout
+  };
+  
+
 
   const getHoverText = (setting) => {
     if (setting === 'ABOUT') {
