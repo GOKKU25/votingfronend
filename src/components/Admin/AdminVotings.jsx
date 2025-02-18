@@ -12,7 +12,7 @@ const AdminVotings = () => {
   useEffect(() => {
     const fetchVotingData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/voting/all');
+        const response = await axios.get('https://votingbackend-favz.onrender.com/api/voting/all');
         const sortedVotings = response.data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         setVotings(sortedVotings);
       } catch (error) {
@@ -33,7 +33,7 @@ const AdminVotings = () => {
   // Handle the delete voting button click
   const handleDeleteVoting = async (votingId) => {
     try {
-      const response = await axios.delete(`http://localhost:5000/api/voting/${votingId}`);
+      const response = await axios.delete(`https://votingbackend-favz.onrender.com/api/voting/${votingId}`);
       if (response.status === 200) {
         setVotings(votings.filter((voting) => voting._id !== votingId));
         alert('Voting category deleted successfully.');

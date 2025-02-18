@@ -11,7 +11,7 @@ const Profile = () => {
     if (token) {
       // Fetch the user data from the backend
       axios
-        .get('http://localhost:5000/api/user/profile', {
+        .get('https://votingbackend-favz.onrender.com/api/user/profile', {
           headers: {
             Authorization: `Bearer ${token}`, // Send token for authentication
           },

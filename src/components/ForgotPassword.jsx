@@ -29,7 +29,7 @@ const ForgotPassword = () => {
 
     try {
       // Make the POST request to your backend to send the password to the email
-      const response = await axios.post('http://localhost:5000/api/reset-password', { email });
+      const response = await axios.post('https://votingbackend-favz.onrender.com/api/reset-password', { email });
 
       if (response.status === 200) {
         setMessage('A password has been sent to your email!');

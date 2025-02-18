@@ -42,7 +42,7 @@ const Open = () => {
 
     try {
       // Send the voting data to the backend
-      const response = await fetch('http://localhost:5000/api/open-voting/create', {
+      const response = await fetch('https://votingbackend-favz.onrender.com/api/open-voting/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -9,7 +9,7 @@ const VoteResult = () => {
   useEffect(() => {
     const fetchVotingData = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/voting/all');
+        const response = await axios.get('https://votingbackend-favz.onrender.com/api/voting/all');
         const sortedVotings = response.data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
         setVotings(sortedVotings);
       } catch (error) {

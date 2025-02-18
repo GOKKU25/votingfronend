@@ -16,7 +16,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchVotings = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/voting/all');
+        const response = await axios.get('https://votingbackend-favz.onrender.com/api/voting/all');
         setVotings(response.data);
       } catch (error) {
         console.error('Error fetching voting categories', error);
@@ -37,7 +37,7 @@ const Dashboard = () => {
     }
 
     try {
-      const response = await axios.post('http://localhost:5000/api/voting/submit', {
+      const response = await axios.post('https://votingbackend-favz.onrender.com/api/voting/submit', {
         votingId,
         selectedOption,
         userEmail, // Pass user email here to identify the user

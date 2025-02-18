@@ -12,7 +12,7 @@ const Loginn = () => {
 
   // function handleLogin() {
   //   axios
-  //     .post('http://localhost:5000/api/auth/', form)
+  //     .post('https://votingbackend-favz.onrender.com/api/auth/', form)
   //     .then((res) => {
   //       alert(res.data.message);
   //       if (res.data.token) {
@@ -40,7 +40,7 @@ const Loginn = () => {
 
   function handleLogin() {
     axios
-      .post('http://localhost:5000/api/auth/', form)
+      .post('https://votingbackend-favz.onrender.com/api/auth/', form)
       .then((res) => {
         alert(res.data.message);
         if (res.data.token) {

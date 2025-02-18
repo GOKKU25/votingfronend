@@ -51,7 +51,7 @@ const AddVoting = () => {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/api/voting/create", {
+      const response = await axios.post("https://votingbackend-favz.onrender.com/api/voting/create", {
         category,
         options,
       });

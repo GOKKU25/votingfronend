@@ -45,7 +45,7 @@ const Signup = () => {
     }
 
     try {
-      await axios.post('http://localhost:5000/api/auth/signup', { email, password, name, mobileNumber, role: 'voter' });
+      await axios.post('https://votingbackend-favz.onrender.com/api/auth/signup', { email, password, name, mobileNumber, role: 'voter' });
       alert('Registration successful');
       navigate('/');
     } catch (err) {
